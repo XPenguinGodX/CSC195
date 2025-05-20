@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+using namespace std;
 
 class Food
 {
@@ -20,7 +22,7 @@ public:
 	
 	}
 
-	void consume();
+	virtual void consume() = 0; //Pure virtual function, Does not need a body
 
 	int getCalories() {
 		return m_calories;
