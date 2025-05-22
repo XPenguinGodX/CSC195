@@ -3,11 +3,12 @@
 #include "User.h"
 using namespace std;
 
-int Main() {
+int main() {
 
 	Database database;
 
 	database.Create(User::eType::KOOLPENGUINACCOUNT);
 
+	return 1;
 
 }
