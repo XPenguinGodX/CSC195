@@ -4,14 +4,17 @@
 
 Database::~Database()
 {
+	for (User* user : m_users) {
+		delete user;
+	}
+	m_users.clear();
 }
 
 void Database::Create(User::eType type)
 {
 	User* user = nullptr;
 
-	switch (type
-)
+	switch (type)
 	{
 	case User::eType::KOOLPENGUINACCOUNT:
 		user = new KoolPenguinAccount;
