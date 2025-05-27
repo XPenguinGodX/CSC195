@@ -30,13 +30,27 @@ void Database::Create(User::eType type)
 
 void Database::DisplayAll()
 {
+	for (User* user : m_users) {
+		user->Write(cout);
+	}
 
 }
 
 void Database::Display(const std::string& Username)
 {
+	for (User* user : m_users) {
+		if (user->getUsername() == Username) {
+			user->Write(cout);
+		}
+	}
 }
 
-void Database::Display(User::eType type)
-{
+void Database::Display(User::eType type){
+	
+	for (User* user : m_users) {
+		if (user->GetType() == type) {
+			user->Write(cout);
+		}
+	}
+
 }

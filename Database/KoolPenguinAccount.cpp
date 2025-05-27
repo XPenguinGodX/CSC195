@@ -14,3 +14,8 @@ void KoolPenguinAccount::Write(ostream& output)
 
 	output << "Level of Coolness: " << m_CoolnessLvl << endl;
 }
+
+User::eType KoolPenguinAccount::GetType() {
+
+	return User::eType::KOOLPENGUINACCOUNT;
+}

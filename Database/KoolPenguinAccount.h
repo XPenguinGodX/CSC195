@@ -3,7 +3,7 @@
 class KoolPenguinAccount : public User
 {
 public:
-	eType GetType() override { return eType::KOOLPENGUINACCOUNT; }
+	eType GetType() override;
 
 	void Read(ostream& output, istream& input) override;
 	void Write(ostream& output) override;
