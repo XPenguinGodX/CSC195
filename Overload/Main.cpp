@@ -17,6 +17,15 @@ void operator << (ostream& output, ost::Point& p)
 	output << p.x << " : " << p.y << endl;
 }
 
+//ost::Point operator - (ost::Point p1, ost::Point p2)
+//{
+//	ost::Point p3;
+//	p3.x = p1.x - p2.x;
+//	p3.y = p1.y - p2.y;
+//	return p3;
+//}
+
+
 int main() 
 {
 	cout << "--Functions Overloads--" << endl;

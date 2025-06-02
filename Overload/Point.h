@@ -15,6 +15,8 @@ namespace ost {
 		void Write(ostream& output);
 		void Add(Point& point);
 
+		Point operator - (ost::Point p2);
+
 		
 
 	};
