@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
+//allows me to handle exceptions 
 #include <stdexcept>
+
 #include <numeric>
 using namespace std;
 
@@ -14,9 +16,12 @@ namespace mathlib
 
 		void simplify()
 		{
+			//finds greatest common divisor
 			T divisor = gcd(numerator, denominator);
 			numerator /= divisor;
 			denominator /= divisor;
+
+			//makes sure denominator is positive unless but numbers are negative
 			if (denominator < 0)
 			{
 				numerator = -numerator;
@@ -26,6 +31,7 @@ namespace mathlib
 		}
 
 	public:
+		//Fraction constructor
 		Fraction(T num = 0, T denom = 1) : numerator(num), denominator(denom) {
 			if (denominator == 0)
 				throw invalid_argument("Denominator cant be zero.");
