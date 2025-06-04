@@ -41,6 +41,27 @@ void PetManager::ShowAllPets() const {
     }
 }
 
+void PetManager::DeletePet() {
+    if (pets.empty()) {
+        cout << "There are no pets to delete.\n";
+        return;
+    }
+
+    ShowAllPets();
+    cout << "Enter the number of the pet you want to delete: ";
+    int index;
+    cin >> index;
+
+    if (index < 1 || index > pets.size()) {
+        cout << "Invalid selection.\n";
+        return;
+    }
+
+    pets.erase(pets.begin() + (index - 1));
+
+    cout << "Pet deleted successfully.\n";
+}
+
 void PetManager::InteractWithPet() {
     if (pets.empty()) {
         cout << "No pets to interact with.\n";

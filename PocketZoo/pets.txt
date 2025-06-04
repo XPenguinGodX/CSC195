@@ -1,0 +1,4 @@
+1
+Penguin
+Richard 100 50
+0

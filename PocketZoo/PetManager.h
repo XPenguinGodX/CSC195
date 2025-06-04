@@ -9,6 +9,7 @@ private:
     vector<unique_ptr<VirtualPet>> pets;
 
 public:
+    void DeletePet();
     void AddPet();
     void ShowAllPets() const;
     void InteractWithPet();

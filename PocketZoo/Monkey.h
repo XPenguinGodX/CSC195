@@ -6,7 +6,7 @@ private:
     int bananaCount;
 
 public:
-    Monkey(const std::string& name = "George", int bananaCount = 0);
+    Monkey(const string& name = "George", int bananaCount = 0);
     virtual ~Monkey();
 
     void Feed() override;

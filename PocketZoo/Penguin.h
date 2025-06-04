@@ -6,7 +6,7 @@ private:
     int fishCount; // unique penguin trait
 
 public:
-    Penguin(const std::string& name = "Pengy", int fishCount = 0);
+    Penguin(const string& name = "Pengy", int fishCount = 0);
     virtual ~Penguin();
 
     void Feed() override;

@@ -8,12 +8,12 @@ int main() {
     int choice;
 
     do {
-        cout << "\n=== Virtual Pet Simulator ===\n";
         cout << "1. Add Pet\n";
         cout << "2. Show All Pets\n";
         cout << "3. Interact With a Pet\n";
-        cout << "4. Save Pets\n";
-        cout << "5. Load Pets\n";
+        cout << "4. Delete a Pet\n";       
+        cout << "5. Save Pets\n";
+        cout << "6. Load Pets\n";
         cout << "0. Exit\n";
         cout << "Choice: ";
         cin >> choice;
@@ -30,9 +30,12 @@ int main() {
             manager.InteractWithPet();
             break;
         case 4:
-            manager.SaveAll("pets.txt");
+            manager.DeletePet();
             break;
         case 5:
+            manager.SaveAll("pets.txt");
+            break;
+        case 6:
             manager.LoadAll("pets.txt");
             break;
         case 0:
