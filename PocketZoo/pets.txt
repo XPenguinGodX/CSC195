@@ -1,4 +1,7 @@
-1
+2
 Penguin
-Richard 100 50
+Richard 110 55
 0
+Monkey
+Bambo 105 42
+1

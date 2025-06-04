@@ -48,5 +48,7 @@ int main() {
 
     } while (choice != 0);
 
+    _CrtDumpMemoryLeaks();
+
     return 0;
 }
