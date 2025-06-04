@@ -128,7 +128,14 @@ void PetManager::LoadAll(const string& filename) {
 
     for (size_t i = 0; i < count; ++i) {
         string type;
-        getline(in, type);
+        do {
+            if (in.eof()) {
+                cout << "Unexpected end of file while reading pet type.\n";
+                return;
+            }
+
+            getline(in, type);
+        } while (type.empty());
 
         unique_ptr<VirtualPet> pet;
         if (type == "Penguin")
