@@ -1,5 +1,6 @@
 #include "PetManager.h"
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -47,6 +48,10 @@ int main() {
         }
 
     } while (choice != 0);
+
+    /*ifstream in("pets.txt");
+    string line;
+    getline(in, line);*/
 
     _CrtDumpMemoryLeaks();
 

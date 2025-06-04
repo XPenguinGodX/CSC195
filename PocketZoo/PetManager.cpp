@@ -136,7 +136,14 @@ void PetManager::LoadAll(const string& filename) {
         else if (type == "Monkey")
             pet = make_unique<Monkey>();
         else if (type == "Rino")
-            pet = make_unique<Rino>();
+            pet = make_unique<Rino>(); 
+        else {//PROVIDED BY CHAT
+            cout << "Warning: Unknown pet type \"" << type << "\" found in file. Skipping.\n";
+            // optionally skip a line to prevent file desync
+            string dummy;
+            getline(in, dummy);  // skip the next line assuming it's pet data
+            continue; // skip this loop iteration
+        };
 
         if (pet) {
             pet->Load(in);
