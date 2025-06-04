@@ -1,0 +1,49 @@
+#include "PetManager.h"
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    PetManager manager;
+    int choice;
+
+    do {
+        cout << "\n=== Virtual Pet Simulator ===\n";
+        cout << "1. Add Pet\n";
+        cout << "2. Show All Pets\n";
+        cout << "3. Interact With a Pet\n";
+        cout << "4. Save Pets\n";
+        cout << "5. Load Pets\n";
+        cout << "0. Exit\n";
+        cout << "Choice: ";
+        cin >> choice;
+        cin.ignore();
+
+        switch (choice) {
+        case 1:
+            manager.AddPet();
+            break;
+        case 2:
+            manager.ShowAllPets();
+            break;
+        case 3:
+            manager.InteractWithPet();
+            break;
+        case 4:
+            manager.SaveAll("pets.txt");
+            break;
+        case 5:
+            manager.LoadAll("pets.txt");
+            break;
+        case 0:
+            cout << "Thanks for playing!\n";
+            break;
+        default:
+            cout << "Invalid choice.\n";
+            break;
+        }
+
+    } while (choice != 0);
+
+    return 0;
+}
