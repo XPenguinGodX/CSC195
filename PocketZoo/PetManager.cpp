@@ -4,6 +4,7 @@
 #include "Rino.h"
 #include <iostream>
 #include <fstream>
+using namespace std;
 
 void PetManager::AddPet() {
     cout << "Choose a pet type:\n1. Penguin\n2. Monkey\n3. Rino\nChoice: ";
@@ -128,14 +129,7 @@ void PetManager::LoadAll(const string& filename) {
 
     for (size_t i = 0; i < count; ++i) {
         string type;
-        do {
-            if (in.eof()) {
-                cout << "Unexpected end of file while reading pet type.\n";
-                return;
-            }
-
-            getline(in, type);
-        } while (type.empty());
+        getline(in, type);
 
         unique_ptr<VirtualPet> pet;
         if (type == "Penguin")
@@ -144,7 +138,7 @@ void PetManager::LoadAll(const string& filename) {
             pet = make_unique<Monkey>();
         else if (type == "Rino")
             pet = make_unique<Rino>(); 
-        else {//PROVIDED BY CHAT
+        else {
             cout << "Warning: Unknown pet type \"" << type << "\" found in file. Skipping.\n";
             // optionally skip a line to prevent file desync
             string dummy;
